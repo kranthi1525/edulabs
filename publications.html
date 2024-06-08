@@ -40,19 +40,19 @@
   h1 {
     text-align: center;
     margin-bottom: 40px;
-    color: #004d7a;
+    color: #06BBCC;
     font-size: 36px;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
   
   h2 {
-    color: #004d7a;
+    color: #181D38;
     margin-bottom: 20px;
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* border-bottom: 2px solid #C5CF31;? */
+    border-bottom: 2px solid #181D38;
     padding-bottom: 10px;
   }
   
@@ -64,15 +64,16 @@
     gap: 10px;
   }
   
-  .btn {
-    /* background-color: #C5CF31; */
-    color: #ffffff;
-    border: none;
-    padding: 12px 24px;
+  .button-group .btn {
+    background-color: transparent;
+    border:1px solid #06BBCC;
+    color: #06BBCC;
+   
+    padding: 6px 12px;
     margin: 0 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 5px;
+    border-radius: 30px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -81,6 +82,7 @@
   
   .btn.active {
     background-color: #06BBCC;
+    color: white;
   }
   
   .btn:hover {
@@ -105,24 +107,28 @@
   }
   
   .publication-item {
-    background-color: #F0FBFC;
+    /* border:1px solid #06BBCC; */
     width: 20rem;
+    height: 18rem;
     border-radius: 5px;
-    box-shadow:  2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.187);
     padding: 20px;
     margin-bottom: 20px;
+  }
+  .publication-item p{
+    color: black;
   }
   
   .year {
     font-weight: bold;
     margin-bottom: 10px;
-    color: #06BBCC;
+    color: #181D38;
   }
   
   .number {
     font-weight: bold;
     margin-bottom: 10px;
-    color: #06BBCC;
+    color: #181D38;
   }
     </style>
 </head>
@@ -139,23 +145,24 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>labs</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <a href="publications.html" class="nav-item nav-link">PUBLICATIONS</a>
-                <a href="alumnae.html" class="nav-item nav-link">Alumnae</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
+      <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+          <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>labs</h2>
+      </a>
+      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="courses.html" class="nav-item nav-link">Courses</a>
+              <a href="publications.html" class="nav-item nav-link">PUBLICATIONS</a>
+              <a href="labfacilities.html" class="nav-item nav-link">LAB FACILITIES</a>
+              <a href="alumnae.html" class="nav-item nav-link">Alumni</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+      </div>
+  </nav>
     <!-- Navbar End -->
 
 
@@ -179,71 +186,109 @@
 
 
     <!-- publicationns Start -->
+    
+		
     <section class="publi">
         <div class="container9">
             <h1>Publications</h1>
-            
+            <div class="button-group">
+              <button class="btn active" data-filter="all">All</button>
+              <button class="btn" data-filter="patents" >Patents</button>
+              <button class="btn" data-filter="journals" >Journals</button>
+              <button class="btn" data-filter="conferences" >Conferences</button>
+            </div>
             <div class="publication-list">
-                <h2>Patents</h2>
+                <h2 class="category patents">Patents</h2>
               <div class="category patents">
                 
-                <div class="publication-item" data-category="patents">
+                <a href="#" class="publication-item" data-category="patents">
                   <div class="year">2020</div>
                   <p>Persons: Ng & Erum Baresh, "System and Method for mapping of industrial data Heterogeneous Dynamic Using Deep AutoML" Patent Application No. 202031034271, 2020.</p>
-                </div>
-                <div class="publication-item" data-category="patents">
+                </a>
+                <a href="#" class="publication-item" data-category="patents">
                   <div class="year">2019</div>
                   <p>Persons: Ng & Erum Baresh, "Method for determining the retention of the context of Process-in-any arbitrary buffer using integrated annotations" Patent Application No. 201931040664, 61/649,105, 20.03.2019.</p>
-                </div>
+                </a>
               </div>
-              <h2>Journals</h2>
+              <h2 class="category journals">Journals</h2>
               <div class="category journals">
                 
-                <div class="publication-item" data-category="journals">
+                <a href="#" class="publication-item" data-category="journals">
                   <div class="year">2021</div>
                   <p>E Kolunu, P Raj, E Baresh, "Sparse improved analysis of dynamic variable process using single data auto-institution system and image preproccessing." CIBIMA 2021, 15(5), 2021.</p>
-                </div>
-                <div class="publication-item" data-category="journals">
+                </a>
+                <a href="#" class="publication-item" data-category="journals">
                   <div class="year">2019</div>
                   <p>E Kolunu, E Baresh, P Raj, "Automated surface fracture analysis using Deep preproccesing: An application for surface fracture analysis." Applied Surface Science, 759, 145-17, 2019.</p>
-                </div>
-                <div class="publication-item" data-category="journals">
+                </a>
+                <a href="#" class="publication-item" data-category="journals">
                   <div class="year">2018</div>
                   <p>E Baresh, "Automation Flow Geometry for Phase of Craft Alignments", Oxidise.</p>
-                </div>
-                <div class="publication-item" data-category="journals">
+                </a>
+                <a href="#" class="publication-item" data-category="journals">
                   <div class="year">2016</div>
                   <p>E Baresh, VK Awath, VK Jagganroat, G Gatica, "Quantative single-cel separation flow-analyzer for application and extraction of microcracks from geological stratigraphy based on petrofabric index, Petrovic geofabric concentration flow analyzer dv: spectroscopic methods (Imc 8017-8023)</p>
-                </div>
-                <div class="publication-item" data-category="journals">
+                </a>
+                <a href="#" class="publication-item" data-category="journals">
                   <div class="year">2015</div>
                   <p>E Baresh, V.E Kalaam, E.E Gantic, "Single-cell central architecture characterization with highintegrated precision machine visualization." IEEE Transactions On Applied Superstudies, 25, 1, 1-8 (2015).</p>
-                </div>
-                <div class="publication-item" data-category="journals">
+                </a>
+                <a href="#" class="publication-item" data-category="journals">
                   <div class="year">2014</div>
                   <p>T. Vu, C Rahul, M, Devansh, E.E Gantic, E Baresh, "Signal tracking approach for seismic sources based on signal processing." Applied Optics, 12, 9, Article 54-03, 002</p>
-                </div>
+                </a>
               </div>
-              <h2>Conferences</h2>
+              <h2 class="category conferences">Conferences</h2>
               <div class="category conferences">
                 
-                <div class="publication-item" data-category="conferences">
+                <a href="#" class="publication-item" data-category="conferences">
                   <div class="number">#1</div>
                   <p>Sheth, Raj S, "Single Cell Optical Reconstruction Standard for the Mobile Detection of the Quality of Juice", International Conference on Flow Characteriristics, 17-20, 2021. Orlando, Florida, USA.</p>
-                </div>
-                <div class="publication-item" data-category="conferences">
+                </a>
+                <a href="#" class="publication-item" data-category="conferences">
                   <div class="number">#2</div>
                   <p>Cohen-Samasan, Miraj, "Anthropogenic Modelling Based Phase Analysis", Frontiers in Optics, 27-29, 2021, Orlando, Florida, USA.</p>
-                </div>
-                <div class="publication-item" data-category="conferences">
+                </a>
+                <a href="#" class="publication-item" data-category="conferences">
                   <div class="number">#3</div>
                   <p>Session: "Contrast Imaging Using Duplet Laser Ultradiop Characteristics", Digital Holography and Three-Demensional Imaging, March 23, 2016, Baltimore, MD.</p>
-                </div>
+                </a>
               </div>
             </div>
           </div>
         
-          
+          <script >
+        
+        document.addEventListener('DOMContentLoaded', function() {
+          const buttons = document.querySelectorAll('.btn');
+          const categories = document.querySelectorAll('.category');
+        
+          buttons.forEach(button => {
+            button.addEventListener('click', () => {
+              const filter = button.dataset.filter;
+              buttons.forEach(btn => btn.classList.remove('active'));
+              button.classList.add('active');
+        
+              categories.forEach(category => {
+                if (filter === 'all') {
+                  category.style.display = 'flex';
+                } else {
+                  const categoryName = category.classList[1];
+                  if (categoryName === filter) {
+                    category.style.display = 'flex';
+                  } else {
+                    category.style.display = 'none';
+                  }
+                }
+              });
+            });
+          });
+        });
+
+       
+
+        
+          </script>
       </section>
     <!-- publications End -->
         
