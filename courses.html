@@ -26,6 +26,68 @@
 
     <!-- Template Stylesheet -->
     <link href="style.css" rel="stylesheet">
+
+    <style>
+        /* Add these styles to your existing CSS file */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 40px;
+  border: none;
+  border-radius: 8px;
+  width: 60%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  animation-name: modalFadeIn;
+  animation-duration: 0.4s;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.close-btn {
+  color: #888888;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+}
+.view-syllabus-btn{
+    background-color:#06BBCC;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    color: white;
+    margin-bottom: 30px;
+}
+    </style>
 </head>
 
 <body>
@@ -153,15 +215,15 @@
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
-                            <div class="mb-3">
+                            <button class="view-syllabus-btn" data-syllabus="course1">View Syllabus</button>
+                            <!-- <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small>(123)</small>
-                            </div>
+                            </div> -->
                             <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
                         </div>
                         <div class="d-flex border-top">
@@ -181,7 +243,8 @@
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
+                            <button class="view-syllabus-btn" data-syllabus="course2">View Syllabus</button>
+<!--                        
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
@@ -189,7 +252,7 @@
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small>(123)</small>
-                            </div>
+                            </div> -->
                             <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
                         </div>
                         <div class="d-flex border-top">
@@ -209,7 +272,8 @@
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
+                            <button class="view-syllabus-btn" data-syllabus="course3">View Syllabus</button>
+<!-- 
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
@@ -217,7 +281,7 @@
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small>(123)</small>
-                            </div>
+                            </div> -->
                             <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
                         </div>
                         <div class="d-flex border-top">
@@ -230,6 +294,96 @@
             </div>
         </div>
     </div>
+
+
+
+    <div class="modal" id="syllabus-modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <div class="modal-body">
+            <!-- Syllabus content will be loaded here -->
+          </div>
+        </div>
+      </div>
+
+
+
+      <script>
+        // Course syllabuses
+const courseSyllabuses = {
+  course1: `
+    <h2>Course 1 Syllabus</h2>
+    <ol>
+      <li>Introduction to the Course</li>
+      <li>Topic 1 Details</li>
+      <li>Topic 2 Details</li>
+      <li>Topic 3 Details</li>
+    </ol>
+  `,
+  course2: `
+    <h2>Course 2 Syllabus</h2>
+    <ol>
+      <li>Overview of the Subject</li>
+      <li>Fundamental Concepts</li>
+      <li>Advanced Topics</li>
+      <li>Case Studies</li>
+      <li>Final Project</li>
+    </ol>
+  `,
+  course3: `
+    <h2>Course 3 Syllabus</h2>
+    <ul>
+      <li>Module 1: Introduction</li>
+      <li>Module 2: Core Principles</li>
+      <li>Module 3: Practical Applications</li>
+      <li>Module 4: Emerging Trends</li>
+      <li>Module 5: Final Assessment</li>
+    </ul>
+  `
+};
+
+
+// Get the modal and the close button
+var modal = document.getElementById("syllabus-modal");
+var closeBtn = document.getElementsByClassName("close-btn")[0];
+
+// Get all the "View Syllabus" buttons
+var viewSyllabusButtons = document.querySelectorAll(".view-syllabus-btn");
+
+// Loop through the buttons and add a click event listener
+viewSyllabusButtons.forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    var syllabusId = this.getAttribute("data-syllabus");
+    showSyllabusModal(syllabusId);
+  });
+});
+
+// When the user clicks on the close button, close the modal
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Function to show the syllabus modal and load the content
+function showSyllabusModal(syllabusId) {
+  var modalBody = document.querySelector(".modal-body");
+  
+  // Load the syllabus content based on the syllabusId
+  if (courseSyllabuses[syllabusId]) {
+    modalBody.innerHTML = courseSyllabuses[syllabusId];
+  } else {
+    modalBody.innerHTML = "Syllabus content not found.";
+  }
+
+  modal.style.display = "block";
+}
+      </script>
     <!-- Courses End -->
 
 
