@@ -1,308 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    
+  <head>
     <title>company Name</title>
-   
+
     <!-- Favicon -->
-    <link href="favicon.ico" rel="icon">
+    <link href="favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="animate.min.css" rel="stylesheet">
-    <link href="owl.carousel.min.css" rel="stylesheet">
+    <link href="animate.min.css" rel="stylesheet" />
+    <link href="owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
 
     <style>
-      
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-/* 
-body {
-position: relative;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-width: 100%;
-} */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
 
-.bd {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
-}
-main {
-width: 1000px;
-margin: auto;
-overflow-x: hidden;
-}
+      html {
+        scroll-behavior: smooth;
+      }
 
-main h1 {
-text-align: center;
-font-size: clamp(2rem, 4vw, 2.6rem);
-color: #fff;
-}
-
-.slide-container {
-display: flex;
-
-width: 7000px;
-transition: 0.5s;
-gap: 0rem;
-}
-
-.slide-item {
-position: relative;
-display: flex;
-width: 1000px;
-height: 450px;
-}
-
-.hero-container {
-position: absolute;
-top: 0;
-right: 0;
-height: 100%;
-}
-
-.hero-container img {
-height: 100%;
-border-radius: 10px;
-width: 320px;
-object-fit: cover;
-pointer-events: none;
-user-select: none;
-}
-
-.content-container {
-position: absolute;
-left: 0;
-top: 40%;
-transform: translateY(-40%);
-width: 700px;
-height: 370px;
-color: #4d4352;
-background:#F0FBFC;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(4.5px);
--webkit-backdrop-filter: blur(4.5px);
-border-radius: 10px;
-padding: 45px;
-z-index: 2;
-
-user-select: none;
-}
-
-.content-container p {
-font-size: 1rem;
-font-weight: 400;
-line-height: 1.3;
-}
-
-.content-container h2 {
-font-size: 1.5rem;
-font-weight: 600;
-margin-top: 35px;
-color: #4d4352;
-}
-
-.indicator-container {
-display: flex;
-justify-content: center;
-margin-top: 4rem;
-}
-
-.indicator-container .btn {
-display: inline-block;
-height: 15px;
-width: 15px;
-margin: 4px;
-border-radius: 15px;
-background: #06BBCC;
-cursor: pointer;
-transition: all 0.5s ease-in-out;
-}
-
-.btn.active {
-width: 30px;
-}
-
-.slider-container {
-width: 100%;
-overflow: hidden;
-}
-
-
-
-/* ... (the rest of the CSS rules) ... */
-
-@media (max-width: 850px) {
-    main {
-        width: 500px;
-        height: max-content;
-        /* border: 2px solid black; */
-        
-       
-    }
-
-    .slide-container {
-        width: 2500px;
-        display: flex;
-        
-       
-    }
-
-    .slide-item {
-        width: 700px;
-        height: 600px;
-        
-        margin: 20px;
+      .bd {
         position: relative;
-        padding: 50px;
         display: flex;
-        gap: 40rem;
-        flex-direction: column-reverse;
-    }
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100%;
+      }
 
-    .hero-container img {
-        height: 170px;
-        width: 170px;
-    }
+      main {
+        /* width: 800px; */
+        width: 100%;
+        display: flex;
 
-    .content-container {
+        gap: 10px;
+      }
+
+      main h1 {
+        text-align: center;
+        font-size: clamp(2rem, 4vw, 2.6rem);
+        color: #fff;
+        margin-bottom: 70px;
+      }
+
+      .onei {
+        display: flex;
+        gap: 90px;
+        padding: 30px;
+        width: 80rem;
+        flex-wrap: wrap;
+        width: 100%;
+        transition: 0.5s;
+      }
+
+      .slide-col {
+        position: relative;
+        width: 800px;
+        height: 400px;
+      }
+
+      .hero {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+      }
+
+      .hero img {
+        height: 100%;
+        border-radius: 10px;
         width: 320px;
-        height: auto;
-        padding: 20px;
-        
-        top: 20rem;
-        
-    }
+        object-fit: cover;
+        pointer-events: none;
+        user-select: none;
+      }
 
-    .content-container p {
-        font-size: 0.9rem;
-    }
+      .content {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 520px;
+        height: 270px;
+        color: #4d4352;
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.5px);
+        -webkit-backdrop-filter: blur(4.5px);
+        border-radius: 10px;
+        padding: 45px;
+        z-index: 2;
+        user-select: none;
+      }
+      .slid {
+        /* border: 2px solid green; */
+        padding: 30px;
+        width: 100%;
+      }
+      .content p {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.3;
+      }
 
-    .content-container h2 {
-        font-size: 1.2rem;
-        margin-top: 20px;
-    }
-}
+      .content h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 35px;
+        color: #4d4352;
+      }
 
-@media (max-width: 550px) {
-    main {
-        width: 80%;
-        height:90vh;
+      .indicator .btn {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        margin: 4px;
+        border-radius: 15px;
+        background: #fff;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+      }
 
-    }
+      .btn.active {
+        width: 30px;
+      }
 
-    .slide-container {
-        width: 900px;
-        display: flex;
-        gap: 15rem;
-    }
+      .slider {
+        width: 100%;
+        overflow: hidden;
+      }
 
-    .slide-item {
-        width: 1000px;
-        height: 300px;
-        /* border: 1px solid red; */
-    }
-    .slide-item img{
-        position: relative;
-        top: -13rem;
-    }
-    .hero-container {
-        top: 60%;
-        height: 100px;
-        z-index: 5;
-    }
-    .indicator-container{
-        position: relative;
-        top: 28vh;
-    }
-    .hero-container img {
-        width: 100px;
-    }
+      @media (max-width: 850px) {
+        main {
+          width: 500px;
+        }
 
-    .content-container {
-        width: 300px;
-    }
-}
+        .slide-row {
+          width: 2000px;
+        }
 
-  </style>
-</head>
+        .slide-col {
+          width: 500px;
+          height: 250px;
+        }
 
-<body>
+        .hero img {
+          width: 200px;
+        }
+
+        .content {
+          width: 320px;
+          height: 200px;
+          padding: 20px;
+        }
+
+        .content p {
+          font-size: 0.9rem;
+        }
+
+        .content h2 {
+          font-size: 1.2rem;
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 550px) {
+        main {
+          width: 300px;
+        }
+
+        .slide-row {
+          width: 1200px;
+        }
+
+        .slide-col {
+          width: 500px;
+          height: 300px;
+        }
+
+        .hero {
+          top: 60%;
+          height: 100px;
+          z-index: 5;
+        }
+
+        .hero img {
+          width: 100px;
+        }
+
+        .content {
+          width: 300px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>labs</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <a href="publications.html" class="nav-item nav-link">PUBLICATIONS</a>
-                <a href="labfacilities.html" class="nav-item nav-link">LAB FACILITIES</a>
-                <a href="alumnae.html" class="nav-item nav-link">Alumni</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+    >
+      <a
+        href="index.html"
+        class="navbar-brand d-flex align-items-center px-4 px-lg-5"
+      >
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>labs</h2>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+          <a href="courses.html" class="nav-item nav-link">Courses</a>
+          <a href="publications.html" class="nav-item nav-link">PUBLICATIONS</a>
+          <a href="labfacilities.html" class="nav-item nav-link"
+            >LAB FACILITIES</a
+          >
+          <a href="alumnae.html" class="nav-item nav-link">Alumni</a>
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
+      </div>
     </nav>
     <!-- Navbar End -->
 
-
     <!-- Header Start -->
-    
-    <div class="container-fluid bg-primary py-5 mb-5 page-header" style="background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(https://www.cumbria.ac.uk/media/university-of-cumbria-website/content-assets/images/rhd/masthead-1440-x-535/Alumni-Header-Image.jpg);">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Alumni</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Alumni</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+
+    <div
+      class="container-fluid bg-primary py-5 mb-5 page-header"
+      style="
+        background: linear-gradient(
+            rgba(24, 29, 56, 0.7),
+            rgba(24, 29, 56, 0.7)
+          ),
+          url(https://www.cumbria.ac.uk/media/university-of-cumbria-website/content-assets/images/rhd/masthead-1440-x-535/Alumni-Header-Image.jpg);
+      "
+    >
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h1 class="display-3 text-white animated slideInDown">Alumni</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item">
+                  <a class="text-white" href="#">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="text-white" href="#">Pages</a>
+                </li>
+                <li
+                  class="breadcrumb-item text-white active"
+                  aria-current="page"
+                >
+                  Alumni
+                </li>
+              </ol>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Header End -->
-
 
     <!-- Testimonial Start -->
     <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -345,183 +354,397 @@ overflow: hidden;
     </div> -->
     <!-- Testimonial End -->
 
-    <div class="bd">
-        <main>
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Alumni</h6>
-                <h1 class="mb-5" style="color: black;">Our Students Say!</h1>
+    <div class="modal fade" id="alumniModal" tabindex="-1" aria-labelledby="alumniModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="alumniModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <img id="alumniModalImage" src="" class="img-fluid rounded" alt="Alumni Photo">
+                <h5 class="mt-3">Image Gallery</h5>
+                <div id="alumniModalGallery" class="row g-2"></div>
+              </div>
+              <div class="col-md-8">
+                <h4>About the Alumni</h4>
+                <ul id="alumniModalDetails" class="list-unstyled mb-4"></ul>
+                <h5>Work Experiences</h5>
+                <ul id="alumniModalWorkExperiences" class="list-group list-group-flush"></ul>
+                <h5 class="mt-4">Projects</h5>
+                <ul id="alumniModalProjects" class="list-group list-group-flush"></ul>
+              </div>
             </div>
-      
-            <div class="slide-container" id="slide-container">
-                <div class="slide-item">
-                    <div class="content-container">
-                        <p>Zen Doan is a business analyst, entrepreneur and media proprietor, and investor. She also known as the best selling book author.</p>
-                        <h2>Zen</h2>
-                        <p>Author</p>
-                    </div>
-                    <div class="hero-container">
-                        <img src="alumini1.png" alt="avatar">
-                    </div>
-                </div>
-            
-                <div class="slide-item">
-                    <div class="content-container">
-                        <p>Garima Singhal has a Master's degree in Biomedical Engineering from NIT Rourkela. Her expertise lies in machine learning, Python, image processing, and MATLAB. She has worked on projects involving skin cancer classification using deep learning, analyzing human airway volume, and studying coffee's impact on visual pathways. Garima has interned at IIT Ropar and IIT Delhi, contributing to research on aging, osteoarthritis, and SARS-CoV2 infection modeling. Her achievements include certifications in machine learning, medical image processing, and securing an impressive rank in GATE Biotechnology examination.</p>
-                        <h2>Garima Singhal</h2>
-                        <p>National Institute of Technology (NIT) Rourkela.</p>
-                    </div>
-                    <div class="hero-container">
-                        <img src="alumini2.png" alt="avatar">
-                    </div>
-                </div>
-            
-                <div class="slide-item">
-                    <div class="content-container">
-                        <p>The alumna is a skilled Systems Engineer currently employed at Tata Consultancy Services, Hyderabad, with expertise in back-end development, SQL, data management, and MasterCard-ICS. She completed her M.Tech in Biomedical Engineering from NIT Rourkela and has worked on several machine learning projects, including deep learning for coffee-influenced SSVEP signals and developing a prototype for an IoT-aided non-invasive blood glucose monitoring device. Her achievements include publishing a research article at the ICETE conference in 2019 and receiving the Best Team Award at AXA Equitable, TCS in 2020 for outstanding contribution. She is proficient in Python, SQL, Excel, Machine Learning, and Deep Learning.</p>
-                        <h2>Chekka Jaya Gayatri</h2>
-                        <p>System Engineer
-                            Tata Consultancy Services, Hyderabad</p>
-                    </div>
-                    <div class="hero-container">
-                        <img src="alumini3.png" alt="avatar">
-                    </div>
-                </div>
-            
-                <div class="slide-item">
-                    <div class="content-container">
-                        <p>Vikram Kumar is a final year B.Tech. student in Biomedical Engineering at NIT Rourkela with an impressive academic record from St. Joseph's School. He has undertaken notable projects like developing a web app for sleep apnea diagnosis using deep learning, creating a blockchain-based database infrastructure for a ledger, and participating in statistical learning workshops. Vikram's strengths lie in programming, databases, machine learning, and technologies like AutoCAD and Arduino. Apart from academics, he has been actively involved in extracurricular pursuits such as tutoring, martial arts, and chess, showcasing a well-rounded profile.</p>
-                        <div>
-                            <h2>Vikram Kumar</h2>
-                            <p>B.Tech, NIT Rourkela</p>
-                        </div>
-                    </div>
-                    <div class="hero-container">
-                        <img src="alumini4.png" alt="avatar">
-                    </div>
-                </div>
-            
-                <!-- New slide added -->
-                <div class="slide-item">
-                    <div class="content-container">
-                        <p>Developed a strong proficiency in SQL, Python, PySpark, and related technologies while contributing to various Azure services. Gained hands-on experience working with Azure Databricks, Linked Services, and Azure Data Factory, actively contributing to the design and implementation of numerous pipelines and triggers. Trained to use ADF pipelines with medallion architecture and trigger pipeline runs along with batch apps to receive success messages. Showcased expertise in data and distributed computing, applying various preprocessing techniques involving Spark/Spark pools and image servers. Recipient of the 2017-2019 Academic Excellence Award. Undertook leadership roles as Vice-President and General Secretary of student societies, demonstrating organizational and managerial abilities.</p>
-                        <h2>Kakarla Divya Sree</h2>
-                        <p>B.Tech,NIT Rourkela</p>
-                    </div>
-                    <div class="hero-container">
-                        <img src="img/alumini.png" alt="avatar">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="indicator-container">
-                <span class="btn active"></span>
-                <span class="btn"></span>
-                <span class="btn"></span>
-                <span class="btn"></span>
-                <span class="btn"></span>
-            </div>
-        </main>
+          </div>
+        </div>
+      </div>
     </div>
 
 
-  <script>
-    const btns = document.querySelectorAll(".btn");
-const slideContainer = document.getElementById("slide-container");
-const main = document.querySelector("main");
 
-let currentIndex = 0;
 
-function updateSlide() {
-    const mainWidth = main.offsetWidth;
-    const translateValue = currentIndex * -mainWidth;
-    slideContainer.style.transform = `translateX(${translateValue}px)`;
+    <div class="text-center">
+      <h6 class="section-title bg-white text-center text-primary px-3">
+        Alumni
+      </h6>
+      <h1 class="mb-5">Our Students Say!</h1>
+    </div>
 
-    btns.forEach((btn, index) => {
-        btn.classList.toggle("active", index === currentIndex);
+    <div class="bd">
+      <main>
+        <div class="slid">
+          <div class="onei">
+            <div class="slide-col">
+              <div class="content">
+                <p>
+                  Zen Doan is a business analyst, entrepreneur and media
+                  proprietor, and investor. She also known as the best selling
+                  book author.
+                </p>
+                <div
+                  style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;"
+                >
+                  <div style="width: 50%; ">
+                    <h2>Kakarla Divya Sree</h2>
+                    <p>B.Tech. | NIT Rourkela</p>
+                  </div>
+
+                  <div style="padding:20px;">
+                    <button
+                      class="btn btn-primary mt-3"
+                      data-toggle="modal"
+                      data-target="#alumniModal"
+                      data-alumnus-index="0"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center" style="margin-left: 270px;">
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a
+                    class="btn btn-sm-square btn-primary mx-1"
+                    href="https://www.linkedin.com/in/kakarla-divya-sree-2a46891b0/"
+                    ta
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="hero">
+                <img src="alumini1.png" alt="avatar" />
+              </div>
+            </div>
+
+            <div class="slide-col">
+              <div class="content">
+                <p>
+                  Zen Doan is a business analyst, entrepreneur and media
+                  proprietor, and investor. She also known as the best selling
+                  book author.
+                </p>
+                <div
+                  style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;"
+                >
+                  <div style="width: 50%; ">
+                    <h2>Kakarla Divya Sree</h2>
+                    <p>B.Tech. | NIT Rourkela</p>
+                  </div>
+
+                  <div style="padding:20px;">
+                    <button
+                      class="btn btn-primary mt-3"
+                      data-toggle="modal"
+                      data-target="#alumniModal"
+                      data-alumnus-index="1"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center" style="margin-left: 270px;">
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a
+                    class="btn btn-sm-square btn-primary mx-1"
+                    href="https://www.linkedin.com/in/kakarla-divya-sree-2a46891b0/"
+                    ta
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="hero">
+                <img src="alumini2.png" alt="avatar" />
+              </div>
+            </div>
+
+            <div class="slide-col">
+              <div class="content">
+                <p>
+                  Sarah Dam is an American internet entrepreneur and media
+                  proprietor, and investor. She is the founder of the
+                  multi-national technology company Zara.
+                </p>
+                <h2>Sarah</h2>
+                <p>Zara Inc.</p>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="hero">
+                <img src="alumini4.png" alt="avatar" />
+              </div>
+            </div>
+
+            <div class="slide-col">
+              <div class="content">
+                <p>
+                  Sarah Dam is an American internet entrepreneur and media
+                  proprietor, and investor. She is the founder of the
+                  multi-national technology company Zara.
+                </p>
+                <h2>Sarah</h2>
+                <p>Zara Inc.</p>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="hero">
+                <img src="alumini3.png" alt="avatar" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const alumniData = [
+  {
+    name: "Kakarla Divya Sree",
+    image: "alumini1.png",
+    gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
+    details: [
+      "B.Tech. | NIT Rourkela",
+      "Academic Excellence Award[2017‐2019](Received academic excellence from Bhashyam Institution.)",
+      "DP203 Microsoft Azure Associate Certification[2023]",
+      "Certifications on C,C++,Python,ML from Internshala[2021]",
+    ],
+    workExperiences: [
+      "Developed a strong proficiency in SQL, Python, PySpark, and gained practical experience in utilizing several Azure services.",
+      "Gained hands-on experience on working with Azure Databricks, Linked Services, and Azure Data Factory, where I have actively contributed to the design and implementation of numerous pipelines and triggers.",
+      "Trained to use ADF pipelines with medallion architecture and trigger pipeline runs along with logic apps to receive success message on successful run.",
+      "Data after distributed computing and several preprocessing techniques views are created using sql/spark pool in synapse",
+    ],
+    projects: [
+      "Python(MAY 2021) : Cricket Fantasy Application In this we develop GUI using Qt designer and the data base of cricketers. Application is built with respect to the conditions mentioned. we can select players from different categories and make a team which will be ev",
+      "Reinforcement Learning(MAY 2023) : Worked on finding the effective point care Diagnosis for sepsis patients using Reinforcent Learning.",
+      "Azure(May 2024) : Maintaining and debugging of pipelines with huge data.ETL operations and building new qlik dashboards",
+    ],
+  },
+  {
+    name: "Garima Singhal",
+    image: "alumini2.png",
+    gallery: ["img/gallery7.jpg", "img/gallery8.jpg", "img/gallery9.jpg"],
+    details: [
+      "Treymont Inc.",
+      " Secured All India Rank (AIR)- 573 in GATE Biotechnology 2022, conducted by IIT Kharagpur.",
+      "Recipient of Gold medal for B.Tech. in Biotechnology (Banasthali Vidyapith-2018-2022) ",
+    ],
+    workExperiences: [
+      "Optimizing Convolutional Neural Network (CNN) Models for Efficient Skin Cancer Classification: A Transfer Learning Approach under NIT Rourkela, Department of Biotechnology and Medical Engineering   (Oct 2023 – Present)",
+      "A systematic review on the estimation of human upper airway volume using 2‐dimensional imaging modalities in validation with 3‐dimensional imaging modalities under NIT Rourkela, Department of Biotechnology and Medical Engineering    (July 2023 ‐ Sept 2023)",
+      "Analyzing the effect of coffee consumption on visual pathway using Visual Evoked Potential (VEP) signals and machine learning algorithms under NIT Rourkela, Department of Biotechnology and Medical Engineering    (May 2023 ‐ June 2023)",
+    ],
+    projects: [
+      "Understanding the degeneration of bone and cartilage during Aging and Osteoarthritis with Indian Institute of Technology (IIT), Ropar (June 2022 ‐ July 2022)",
+      "Implications of central metabolism in disease severity using in‐host modeling of SARS‐CoV2 infection with Indian Institute of Technology (IIT), Delhi, Department of Biochemical Engineering and Biotechnology (June 2021 ‐ Dec 2021)",
+      "Generation of antibodies against low molecular weight compounds with National Institute of Health and Family Welfare, Department of Reproductive BioMedicine, New Delhi (May 2020 ‐ June 2020)",
+    ],
+  },
+  // Add more alumni objects here
+];
+
+const alumniModal = document.getElementById("alumniModal");
+const alumniModalLabel = document.getElementById("alumniModalLabel");
+const alumniModalDetails = document.getElementById("alumniModalDetails");
+const alumniModalImage = document.getElementById("alumniModalImage");
+const alumniModalGallery = document.getElementById("alumniModalGallery");
+const alumniModalWorkExperiences = document.getElementById("alumniModalWorkExperiences");
+const alumniModalProjects = document.getElementById("alumniModalProjects");
+
+const viewDetailsButtons = document.querySelectorAll("[data-alumnus-index]");
+
+viewDetailsButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    const alumnus = alumniData[index];
+
+    alumniModalLabel.textContent = alumnus.name;
+    alumniModalDetails.innerHTML = "";
+    alumniModalImage.src = alumnus.image;
+    alumniModalGallery.innerHTML = "";
+    alumniModalWorkExperiences.innerHTML = "";
+    alumniModalProjects.innerHTML = "";
+
+    alumnus.details.forEach((detail) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = detail;
+      alumniModalDetails.appendChild(listItem);
     });
-}
 
-btns.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-        currentIndex = index;
-        updateSlide();
+    alumnus.workExperiences.forEach((experience) => {
+      const listItem = document.createElement("li");
+      listItem.classList.add("list-group-item");
+      listItem.textContent = experience;
+      alumniModalWorkExperiences.appendChild(listItem);
     });
+
+    alumnus.projects.forEach((project) => {
+      const listItem = document.createElement("li");
+      listItem.classList.add("list-group-item");
+      listItem.textContent = project;
+      alumniModalProjects.appendChild(listItem);
+    });
+
+    const galleryImages = alumnus.gallery.map((image) => {
+      const col = document.createElement("div");
+      col.classList.add("col-4", "mb-3");
+      const img = document.createElement("img");
+      img.src = image;
+      img.classList.add("img-fluid", "rounded");
+      img.alt = "Gallery Image";
+      col.appendChild(img);
+      return col;
+    });
+
+    galleryImages.forEach((imageCol) => {
+      alumniModalGallery.appendChild(imageCol);
+    });
+
+    const modal = new bootstrap.Modal(alumniModal);
+    modal.show();
+  });
 });
-
-window.addEventListener("resize", () => {
-    updateSlide();
-});
-  </script>
-
-
-
-        
+    </script>
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4>
-                    <div class="row g-2 pt-2">
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="course-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="course-1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
+    <div
+      class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Quick Link</h4>
+            <a class="btn btn-link" href="">About Us</a>
+            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="">Privacy Policy</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">FAQs & Help</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Contact</h4>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>info@example.com
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Gallery</h4>
+            <div class="row g-2 pt-2">
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="course-1.jpg" alt="" />
+              </div>
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="course-2.jpg" alt="" />
+              </div>
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="course-3.jpg" alt="" />
+              </div>
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="course-2.jpg" alt="" />
+              </div>
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="course-3.jpg" alt="" />
+              </div>
+              <div class="col-4">
+                <img class="img-fluid bg-light p-1" src="course-1.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Newsletter</h4>
+            <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+            <div class="position-relative mx-auto" style="max-width: 400px">
+              <input
+                class="form-control border-0 w-100 py-3 ps-4 pe-5"
+                type="text"
+                placeholder="Your email"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                SignUp
+              </button>
+            </div>
+          </div>
         </div>
-        
+      </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -533,6 +756,5 @@ window.addEventListener("resize", () => {
 
     <!-- Template Javascript -->
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
