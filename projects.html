@@ -1,0 +1,515 @@
+<head>
+    
+    <title>company Name</title>
+   
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="animate.min.css" rel="stylesheet">
+    <link href="owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+    
+        
+        header {
+          background-color: #333;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+        }
+    
+        .navii {
+          background-color: transparent;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          display: flex;
+          justify-content: center;
+          padding: 10px;
+        }
+    
+        .navii button {
+          background-color: transparent;
+          border: none;
+          color: #333;
+          cursor: pointer;
+          font-size: 16px;
+          margin: 0 10px;
+          padding: 5px 10px;
+          transition: color 0.3s ease;
+        }
+    
+        .navii button:hover {
+          color: #06BBCC;
+        }
+    
+        .search-container {
+          display: flex;
+          justify-content: center;
+          margin: 20px 0;
+        }
+    
+        .search-container input {
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+          padding: 8px;
+          width: 300px;
+        }
+    
+        .project-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin: 20px;
+        }
+    
+        .project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 20px;
+  max-width: 350px;
+  padding: 24px;
+  text-align: left;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-card:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.project-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.project-card h3 {
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.project-card span {
+  color: #999;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.project-card .status {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.project-card .status.ongoing {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.project-card .status.completed {
+  background-color: #ffc107;
+  color: #333;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 30px;
+
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 30%;
+  left: 35%;
+  margin: 30px;
+}
+
+.search-wrapper input {
+  width: 100%;
+  height: 40px;
+  padding: 10px 40px 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-wrapper input:focus {
+  border-color: #06BBCC;
+}
+
+.search-wrapper button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: #06BBCC;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-wrapper button:hover {
+  background-color: #0056b3;
+}
+
+.search-wrapper button i {
+  font-size: 14px;
+}
+      </style>
+</head>
+
+<body>
+    
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>labs</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="publications.html" class="nav-item nav-link">PUBLICATIONS</a>
+                <a href="labfacilities.html" class="nav-item nav-link">LAB FACILITIES</a>
+                <a href="alumnae.html" class="nav-item nav-link">Alumni</a>
+                <a href="projects.html" class="nav-item nav-link">Projects</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header" style="background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(https://media.licdn.com/dms/image/C4E12AQG2pj4JkZG0Yw/article-cover_image-shrink_600_2000/0/1520115601955?e=2147483647&v=beta&t=15dJ3ErnJfshcaCF1pn0x_PZO4-UeIeYayT1JR_1HY8);>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">About Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Projects</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>    <!-- Header End -->
+
+
+    <!-- 404 Start -->
+    <div class="navii">
+        <button id="all-btn"><i class="fas fa-list"></i> All</button>
+        <button id="ongoing-btn"><i class="fas fa-spinner"></i> Ongoing</button>
+        <button id="completed-btn"><i class="fas fa-check"></i> Completed</button>
+      </div>
+      <div class="search-wrapper">
+        <input type="text" id="search-input" placeholder="Search projects...">
+        <button id="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+    
+      <div class="project-container" id="project-container">
+        <!-- Project cards will be dynamically inserted here -->
+      </div>
+    
+    <!-- 404 End -->
+
+    <script>
+        const projectData = [
+  {
+    title: "Automatic 3D Cephalometric analysis using 3 Tesla Magnetic Resonance Imaging Using AI",
+    fundingAgency: "ICMR",
+    startDate: "25th May 2023",
+    role: "Principal Investigator (PI)",
+    status: "Ongoing",
+    imageUrl: "https://picsum.photos/200/300"
+  },
+  {
+    title: "Development and validation of an artificial Intelligence based portable screening device for potentially malignant and malignant oral disorders by integrating narrow band imaging with autofluorescence and white light",
+    fundingAgency: "ICMR",
+    startDate: "19th Feb 2024",
+    role: "Principal Investigator (PI)",
+    status: "Ongoing",
+    imageUrl: "https://picsum.photos/200/300"
+  },
+  {
+    title: "Development of composite optical device employing an artificial intelligence algorithm for evaluating the shelf-life of raw agricultural products",
+    fundingAgency: "DST",
+    startDate: "25th May 2023",
+    role: "Co-Principal Investigator (Co-PI)",
+    status: "Ongoing",
+    imageUrl: "https://picsum.photos/200/300"
+  },
+  {
+    title: "DARPAN- Device development for Automated Real-time Prediction of Atrial fibrillation in the Indian Population",
+    fundingAgency: "SERB",
+    startDate: "14th Feb 2024",
+    role: "Co-Principal Investigator (Co-PI)",
+    status: "Ongoing",
+    imageUrl: "https://picsum.photos/200/300"
+  },
+  {
+    title: "Developing an artificial intelligence-enabled multi spectral reflectance photography device for the prediction of the shelf-life of bakery products",
+    fundingAgency: "SERB",
+    startDate: "7th Feb 2024",
+    role: "Co-Principal Investigator (Co-PI)",
+    status: "Ongoing",
+    imageUrl: "https://picsum.photos/200/300"
+  },
+  {
+    title: "Implantable Closed loop Diabetes Management System",
+    fundingAgency: "DST",
+    startDate: "9th Mar 2021",
+    role: "Co-Principal Investigator (Co-PI)",
+    status: "Completed",
+    imageUrl: "https://picsum.photos/200/300"
+  }
+];
+
+const projectContainer = document.getElementById("project-container");
+const searchInput = document.getElementById("search-input");
+const allBtn = document.getElementById("all-btn");
+const ongoingBtn = document.getElementById("ongoing-btn");
+const completedBtn = document.getElementById("completed-btn");
+
+function createProjectCard(project) {
+  const card = document.createElement("div");
+  card.classList.add("project-card");
+
+  const image = document.createElement("img");
+  image.src = project.imageUrl;
+  image.alt = project.title;
+
+  const title = document.createElement("h3");
+  title.textContent = project.title;
+
+  const fundingAgency = document.createElement("p");
+  fundingAgency.textContent = `Funding Agency: ${project.fundingAgency}`;
+
+  const startDate = document.createElement("p");
+  startDate.textContent = `Start Date: ${project.startDate}`;
+
+  const role = document.createElement("p");
+  role.textContent = `Role: ${project.role}`;
+
+  const status = document.createElement("span");
+  status.classList.add("status");
+  status.classList.add(project.status.toLowerCase());
+  status.textContent = project.status;
+
+  card.appendChild(image);
+  card.appendChild(title);
+  card.appendChild(fundingAgency);
+  card.appendChild(startDate);
+  card.appendChild(role);
+  card.appendChild(status);
+
+  return card;
+}
+
+function filterProjects(filter) {
+  projectContainer.innerHTML = "";
+
+  const filteredProjects = filter
+    ? projectData.filter(project => project.status.toLowerCase() === filter.toLowerCase())
+    : projectData;
+
+  filteredProjects.forEach(project => {
+    const projectCard = createProjectCard(project);
+    projectContainer.appendChild(projectCard);
+  });
+}
+
+function searchProjects() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const matchedProjects = projectData.filter(project =>
+    project.title.toLowerCase().includes(searchTerm)
+  );
+
+  projectContainer.innerHTML = "";
+  matchedProjects.forEach(project => {
+    const projectCard = createProjectCard(project);
+    projectContainer.appendChild(projectCard);
+  });
+}
+
+allBtn.addEventListener("click", () => filterProjects());
+ongoingBtn.addEventListener("click", () => filterProjects("ongoing"));
+completedBtn.addEventListener("click", () => filterProjects("completed"));
+searchInput.addEventListener("input", searchProjects);
+
+// Initial load with all projects
+filterProjects();
+    </script>
+        
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="course-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
