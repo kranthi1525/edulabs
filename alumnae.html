@@ -43,6 +43,7 @@
         padding: 0;
         font-family: "Poppins", sans-serif;
       }
+     
 
       html {
         scroll-behavior: smooth;
@@ -81,6 +82,7 @@
         flex-wrap: wrap;
         width: 100%;
         transition: 0.5s;
+        overflow-x: hidden;
       }
 
       .slide-col {
@@ -161,17 +163,24 @@
       }
       @media(max-width :1440px){
         .onei{
-          display: flex;justify-content: center;align-items: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           padding: 4%;
         }
         .slide-col {
-          width: 480px;
+          width: 40%;
           height: 250px;
         }
-        .hero img {
-          width: 200px;
-          margin-right: 0%;
+        .hero {
+          position: relative;
+          width: 50%;
+          left: 70%;
+          overflow: hidden ;
           z-index: 1000;
+        }
+        .hero img{
+          width: 90%;
         }
         .content {
           background-color: transparent;
@@ -188,7 +197,7 @@
         }
       }
 
-      @media (max-width: 850px) {
+      /* @media (max-width: 850px) {
         main {
           width: 500px;
         }
@@ -220,7 +229,7 @@
           font-size: 1.2rem;
           margin-top: 20px;
         }
-      }
+      } */
 
       @media (max-width: 550px) {
         main {
@@ -249,7 +258,7 @@
         .content {
           width: 300px;
         }
-      }
+      } 
     </style>
   </head>
 
@@ -452,7 +461,7 @@
                 </div>
               </div>
               <div class="hero">
-                <img src="alumini1.png" alt="avatar" />
+                <img src="img/alumini1.png" alt="avatar" />
               </div>
             </div>
 
@@ -495,7 +504,7 @@
                 </div>
               </div>
               <div class="hero">
-                <img src="alumini2.png" alt="avatar" />
+                <img src="img/alumini2.png" alt="avatar" />
               </div>
             </div>
 
@@ -538,7 +547,7 @@
                 </div>
               </div>
               <div class="hero">
-                <img src="alumini3.png" alt="avatar" />
+                <img src="img/alumini3.png" alt="avatar" />
               </div>
             </div>
 
@@ -581,7 +590,7 @@
                 </div>
               </div>
               <div class="hero">
-                <img src="alumini4.png" alt="avatar" />
+                <img src="img/alumini4.png" alt="avatar" />
               </div>
             </div>
 
@@ -589,7 +598,7 @@
       const alumniData = [
   {
     name: "Kakarla Divya Sree",
-    image: "alumini1.png",
+    image: "img/alumini1.png",
     gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
     details: [
       "B.Tech. | NIT Rourkela",
@@ -611,7 +620,7 @@
   },
   {
     name: "Garima Singhal",
-    image: "alumini2.png",
+    image: "img/alumini2.png",
     gallery: ["img/gallery7.jpg", "img/gallery8.jpg", "img/gallery9.jpg"],
     details: [
       "Treymont Inc.",
@@ -631,7 +640,7 @@
   },
   {
     name: "Chekka Jaya Gayatri",
-    image: "alumini3.png",
+    image: "img/alumini3.png",
     gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
     details: [
       "Systems Engineer | TCS",
@@ -650,7 +659,7 @@
   },
   {
     name: "Vikram Kumar",
-    image: "alumini4.png",
+    image: "img/alumini4.png",
     gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
     details: [
       "B.Tech. | NIT Rourkela",
