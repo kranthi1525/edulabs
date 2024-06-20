@@ -52,33 +52,23 @@ header {
 
 main {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 20px auto;
   position: relative;
+  min-height: 100vh; /* or a larger fixed value */
 }
 
 .facility-slider {
   width: 100%;
-  height: 500px;
   position: relative;
   overflow: hidden;
 }
 
 .facility-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }
 
-.facility-slide.active {
-  opacity: 1;
-}
 
 .facility-image {
   flex: 1;
@@ -101,57 +91,71 @@ main {
   margin-bottom: 1rem;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
 
-.btn:hover {
-  background-color: #555;
-}
 
-.btn i {
-  margin-left: 0.5rem;
-}
 
-.slider-controls {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
+
+.facility-content {
   display: flex;
-  justify-content: space-between;
-  padding: 0 1rem;
+  align-items: center;
 }
 
-.slider-controls button {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
+.facility-image {
+  flex: 0 0 auto;
+  width: 50%;
+  margin-right: 2rem;
+}
+
+.facility-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.slider-controls button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-footer {
+.table-heading {
   background-color: #333;
   color: #fff;
-  text-align: center;
-  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.table i {
+  margin-right: 8px;
+  color: #29C4D4;
+}
+
+
+
     </style>
 </head>
 
@@ -212,46 +216,54 @@ footer {
 
     <!-- Testimonial Start -->
     <main>
-        <div class="facility-slider">
-          <div class="facility-slide">
-            <div class="facility-image">
-              <img src="https://source.unsplash.com/random/800x600?lab" alt="Chemistry Lab">
-            </div>
-            <div class="facility-content">
-              <h2>Chemistry Lab</h2>
-              <p>Our state-of-the-art chemistry lab is equipped with the latest instruments and equipment for conducting advanced chemical experiments and research.</p>
-              <a href="#" class="btn">Explore <i class="fas fa-arrow-right"></i></a>
-            </div>
+      <div class="facility-slide">
+        <div class="facility-content d-flex align-items-center">
+          <div class="facility-image me-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6haB_dFL5fwNDTWgvc6f-qd9OuWokwbYSNQ&s" alt="Chemistry Lab" class="img-fluid">
           </div>
-    
-          <div class="facility-slide">
-            <div class="facility-image">
-              <img src="https://source.unsplash.com/random/800x600?computer,lab" alt="Computer Lab">
+          <div>
+            <h2>High Performance Computing</h2>
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fas fa-microchip"></i> CPU</td>
+                    <td>Intel Core i7 10700</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-laptop"></i> Motherboard</td>
+                    <td>B460M DS3H AC</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-memory"></i> RAM</td>
+                    <td>64GB DDR4</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-video"></i> GPU</td>
+                    <td>Nvidia GeForce RTX 3060 (12GB)</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-solid fa-sd-card"></i> SSD</td>
+                    <td>500GB</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-hdd"></i> HDD</td>
+                    <td>3.5TB</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="facility-content">
-              <h2>Computer Lab</h2>
-              <p>Our computer lab features high-performance workstations and the latest software for programming, data analysis, and other computational tasks.</p>
-              <a href="#" class="btn">Explore <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-    
-          <div class="facility-slide">
-            <div class="facility-image">
-              <img src="https://source.unsplash.com/random/800x600?biology,lab" alt="Biology Lab">
-            </div>
-            <div class="facility-content">
-              <h2>Biology Lab</h2>
-              <p>Our biology lab is equipped with advanced microscopes, incubators, and other equipment for studying living organisms and conducting biological experiments.</p>
-              <a href="#" class="btn">Explore <i class="fas fa-arrow-right"></i></a>
-            </div>
+            <a href="#" class="btn btn-primary">Explore <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-    
-        <div class="slider-controls">
-          <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-          <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </main>
+      </div>
+    </main>
     <!-- Testimonial End -->
         
 
@@ -318,7 +330,7 @@ footer {
 
 
 
-    <script>
+    <!-- <script>
         window.addEventListener('load', function() {
   const facilitySlides = document.querySelectorAll('.facility-slide');
   const prevBtn = document.querySelector('.prev-btn');
@@ -351,7 +363,7 @@ footer {
   // Show the first slide initially
   showSlide(currentSlide);
 });
-    </script>
+    </script> -->
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
